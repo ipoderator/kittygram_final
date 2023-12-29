@@ -1,4 +1,5 @@
 repo_owner: ipoderator
-kittygram_domain: https://gleb-newtaski.ddns.net
-taski_domain: https://myhostproj.hopto.org
+kittygram_domain: https://myhostproj.hopto.org
+taski_domain: https://gleb-newtaski.ddns.net
 dockerhub_username: ipoderator
+
