@@ -6,7 +6,7 @@ volumes:
   media:
 
 services:
-  db_1:
+  db:
     image: postgres:13.10
     env_file: .env
     volumes:
@@ -18,7 +18,7 @@ services:
       - static:/static/
       - media:/app/media/
     depends_on:
-      - db_1
+      - db
   frontend:
     image: ipoderator/kittygram_frontend
     env_file: .env
