@@ -12,7 +12,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='secret')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['84.201.143.202', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['84.201.143.202', '127.0.0.1', 'localhost', 'myhostproj.hopto.org']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
