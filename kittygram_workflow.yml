@@ -9,7 +9,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     services:
-      restart: always
       postgres:
         image: postgres:13.10
         env:
@@ -19,6 +18,7 @@ jobs:
         ports:
           - "ports:${PORTS_MAIN}"
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        restart: always
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
