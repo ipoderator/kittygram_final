@@ -9,7 +9,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     services:
-      restart: always
       postgres:
         image: postgres:13.10
         env:
