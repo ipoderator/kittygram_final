@@ -15,8 +15,7 @@ jobs:
           POSTGRES_USER: kittygram_user
           POSTGRES_PASSWORD: kittygram_password
           POSTGRES_DB: kittygram
-        ports:
-          - "ports:${PORTS_MAIN}"
+          PORTS: ${{ secrets.PORTS }}
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
     - uses: actions/checkout@v3
