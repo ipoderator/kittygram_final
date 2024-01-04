@@ -31,8 +31,8 @@ services:
     build: ./nginx/
     env_file: .env
     restart: always
-    ports:
-    - DEBUG=${PORTS_MAIN}
+    ports: 
+      - "portsapp:${PORTS_MAIN}"
     volumes:
       - static:/staticfiles/
       - media:/media/
