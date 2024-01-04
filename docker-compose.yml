@@ -32,7 +32,7 @@ services:
     env_file: .env
     restart: always
     ports:
-      - 9000:80
+      - DEBUG=${PORTS_MAIN}
     volumes:
       - static:/staticfiles/
       - media:/media/
