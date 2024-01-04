@@ -14,6 +14,7 @@ services:
   backend:
     build: ./backend/
     env_file: .env
+    restart: always
     volumes:
     - static:/backend_static
     - static:/media
@@ -23,13 +24,15 @@ services:
     env_file: .env
     build: ./frontend/
     command: cp -r /app/build/. /static/
+    restart: always
     volumes:
       - static:/frontend_static
   gateway:
     build: ./nginx/
     env_file: .env
+    restart: always
     ports:
-      - 9000:80
+    - "porsts:${PORTS_MAIN}"
     volumes:
       - static:/staticfiles/
       - media:/media/
