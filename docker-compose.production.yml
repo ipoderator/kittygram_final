@@ -32,7 +32,7 @@ services:
     env_file: .env
     restart: always
     ports: 
-      - DEBUG=${}
+      - DEBUG=${PORTS_MAIN}
     volumes:
       - static:/staticfiles/
       - media:/media/
