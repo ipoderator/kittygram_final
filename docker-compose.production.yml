@@ -35,7 +35,7 @@ services:
     image: ipoderator/kittygram_gateway 
     env_file: .env 
     ports:
-     - "${DOCKER_EXPOSE_PORT:-9000}:${DJANGO_PORT:-80}"
+     - "${DOCKER_EXPOSE_PORT:-8000}:${DJANGO_PORT:-80}"
     volumes: 
       - static:/static 
       - media:/app/media/ 
