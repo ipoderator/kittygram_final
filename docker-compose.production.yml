@@ -35,7 +35,7 @@ services:
     image: ipoderator/kittygram_gateway 
     env_file: .env 
     ports:
-     - 9000:80
+     - DEBUG=${OUT_PORT1}:80
     volumes: 
       - static:/static 
       - media:/app/media/ 
