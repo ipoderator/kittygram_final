@@ -35,7 +35,7 @@ services:
     image: ipoderator/kittygram_gateway 
     env_file: .env 
     ports:
-     - ${OUT_PORT}
+     - ${OUT_PORT1}:{OUT_PORT2}
     volumes: 
       - static:/static 
       - media:/app/media/ 
