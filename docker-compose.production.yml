@@ -15,6 +15,7 @@ services:
     volumes: 
       - pg_data:/var/lib/postgresql/data 
   backend:
+    restart: always
     image: ipoderator/kittygram_backend 
     env_file: .env 
     volumes: 
@@ -23,12 +24,14 @@ services:
     depends_on: 
       - db 
   frontend:
+    restart: always
     image: ipoderator/kittygram_frontend
     env_file: .env 
     command: cp -r /app/build/. /static/ 
     volumes: 
       - static:/static 
-  gateway: 
+  gateway:
+    restart: always
     image: ipoderator/kittygram_gateway 
     env_file: .env 
     ports:
