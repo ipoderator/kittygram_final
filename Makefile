@@ -1,8 +1,4 @@
 add:
-	git add .
-
-commit:
-	git commit -m "New commit makefile"
-
+	git add & git commit -m ""
 push:
 	git push 
